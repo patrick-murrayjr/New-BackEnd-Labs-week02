@@ -31,12 +31,12 @@ public class Week02BooleanConditionalsLoopsLab {
 		// i. "You can drive" if age is greater than or equal to 16
 		// ii. "You cannot drive" otherwise
 		//
-		// if (age >= 16) {
-		// System.out.println("You can drive");
-		// } else {
-		// System.out.println("You cannot drive");
+		 if (age >= 16) {
+			 System.out.println("You can drive");
+		 } else {
+			 System.out.println("You cannot drive");
 
-		// }
+		 }
 		// a. Change the value of age and rerun to see the result
 
 		// 4. Update Solution to Question 3 as follows:
@@ -80,11 +80,13 @@ public class Week02BooleanConditionalsLoopsLab {
 		// ii. If there are less than 2 cookies, print "Yes!"
 		// iii. If there are less than 5 cookies, print "Whoohoooo!"
 		// iv. If there are 5 or more cookies, print "Jackpot!"
-		if (numberOfCookies == 0) {
+		int remaining = numberOfCookies % numberOfChildren;
+		System.out.println("Cookies remaining: " + remaining);
+		if (remaining == 0) {
 			System.out.println("Sad Face");
-		} else if (numberOfCookies < 2) {
+		} else if (remaining < 2) {
 			System.out.println("Yes!");
-		} else if (numberOfCookies < 5) {
+		} else if (remaining < 5) {
 			System.out.println("Whoohoooo!");
 		} else {
 			System.out.println("Jackpot!");
@@ -143,7 +145,7 @@ public class Week02BooleanConditionalsLoopsLab {
 		// ii. "access denied" otherwise
 		String username = "Tommy123";
 		String password = "12345";
-		if (username == "Tommy123" && password == "12345") {
+		if (username.equals("Tommy123")&& password.equals("12345")) {
 			System.out.println("login successful");
 		} else {
 			System.out.println("access denied");
